@@ -6,11 +6,16 @@ server.use(express.urlencoded({ 'extended': true }));
 server.use(logger('dev'));
 
 
-server.post('/ITC505/lab-7/index.html', (req, res) => {
+server.post('/submit', (req, res) => {
   const { noun, verb, adjective, adverb, place } = req.body;
   const madLib = `Once upon a time, there was a ${adjective} ${noun} who loved to ${verb} ${adverb} in ${place}.`;
 
-  res.send(madLib);
+  // res.send(madLib);
+  res.send(`
+      <h1>Generated Mad Lib</h1>
+      <p>${madLib}</p>
+      <a href="index.html">Go Back to Form</a>
+    `);
 });
 
 // Setup static page serving for all the pages in "public"
