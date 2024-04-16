@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Libs Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Mad Libs Form</h1>
+  <form action="/ITC505/lab-7/index.html" method="POST">
+    <label for="noun">Noun:</label>
+    <input type="text" id="noun" name="noun" required><br><br>
+
+    <label for="verb">Verb:</label>
+    <input type="text" id="verb" name="verb" required><br><br>
+
+    <label for="adjective">Adjective:</label>
+    <input type="text" id="adjective" name="adjective" required><br><br>
+
+    <label for="adverb">Adverb:</label>
+    <input type="text" id="adverb" name="adverb" required><br><br>
+
+    <label for="place">Place:</label>
+    <input type="text" id="place" name="place" required><br><br>
+
+    <input type="submit" value="Generate Mad Lib">
+  </form>
+
+  <footer>
+    <p>Addendum: The "Mad Libs Form" webpage that this HTML code generates allows users to enter words
+       to construct a personalized story. It comprises of a form with input fields labeled "place," 
+       "adverb," "adjective," and "verb." Every input field has an appropriate label. When the "Generate
+        Mad Lib" submit button on the form is clicked, the form's data is sent to the same URL. The
+         webpage also has a footer that uses JavaScript to show the document's last modification date. 
+         Using document.lastModified, the JavaScript code collects the document's last changed date and
+          uses it to set the text content of the <span> element with the id lastModified in the footer. 
+            Users can learn when the webpage was last updated by doing this. </p>
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+</footer>
+<script type="text/javascript">
+     var x = document.lastModified;
+     document.getElementById('lastModified').textContent = x;
+</script>
+
+
+</body>
+</html>
